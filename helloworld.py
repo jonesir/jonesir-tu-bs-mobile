@@ -10,6 +10,7 @@ class MainPage(webapp2.RequestHandler):
         soup = BeautifulSoup(html)
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('Hello, World! tubs\n')
+        self.response.write('another line\n')
         self.response.write(soup.get_text())
         
 application = webapp2.WSGIApplication([
