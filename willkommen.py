@@ -6,12 +6,8 @@ import urllib2
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        html = urllib2.urlopen('https://www.tu-braunschweig.de/eitp/kontakt').read()
-        soup = BeautifulSoup(html)
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, World! tubs\n')
-        self.response.write('another line\n')
-        self.response.write(soup.get_text())
+        self.response.write('Hallo, Willkommen bei Mobile TU Braunschweig.')
         
 application = webapp2.WSGIApplication([
     ('/', MainPage),

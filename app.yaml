@@ -5,5 +5,7 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /.*
-  script: helloworld.application 
+- url: /
+  script: willkommen.application
+- url: /fakultaeten/.*
+  script: fakultaeten.application
